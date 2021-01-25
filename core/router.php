@@ -23,7 +23,7 @@ class router
 
     public function direct($uri, $requestType)
     {
-        if ($uri == 'practiotioner20'){
+        if ($uri == 'practiotioner21'){
             header("Location: index.php", true, 301);
         }
 
