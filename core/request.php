@@ -1,4 +1,5 @@
 <?php
+namespace App\Core;
 class request
 {
     public static function uri()

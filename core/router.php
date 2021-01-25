@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Core;
 class router 
 {
     public $routes = [
@@ -38,10 +38,11 @@ class router
     }
     protected function callAction($controller, $action)
     {
-        $controlle = new $controller;
+        $controller = "App\\Controllers\\{$controller}";
+        $controller = new $controller;
         if (! method_exists($controller, $action)) {
             throw new Exception("{$controller} does not respond to the {$action} action.");
         }
-        return $controlle->$action();     
+        return $controller->$action();     
     }
 }
