@@ -1,4 +1,4 @@
 <?php
-$users = $app['database']->selectAll('users');
+$users = App::get('database')->selectAll('users');
 
 include 'views/index.view.php';
